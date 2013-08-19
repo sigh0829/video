@@ -3,6 +3,7 @@ package com.j03_digital.video;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.VideoView;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +11,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		VideoView video=(VideoView) findViewById(R.id.video);
+		
+		//--load and start the movie--
+		video.setVideoPath("/data/samplevideo.3gp");
+		video.start();
 	}
 
 	@Override
